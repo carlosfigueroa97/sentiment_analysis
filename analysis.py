@@ -12,7 +12,9 @@ from time import time
 sentiment = sentiment_analysis.SentimentAnalysisSpanish()
 data_cleansing = []
 analyzed_data = []
-art_pron = [' el ',' la ',' los ',' las ',' un ',' uno ',' una ',' unos ',' unas ',' lo ',' al ',' del ',' a ',' de ']
+art_pron = [' el ',' la ',' los ',' las ',' un ',' uno ',' una ',' unos ',' unas ',' lo ',' al ',' del ',' a ',
+' de ', ' yo ', ' me ', ' mí ', ' nos ', ' nosotras ', ' nosotros ', ' conmigo ', ' tú ', ' usted ', ' ustedes ',
+' él ', ' ella ', ' ellas ', ' ello ', ' ellos ', ' los ']
 
 tiempo_inicial = time() 
 
