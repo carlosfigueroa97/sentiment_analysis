@@ -18,8 +18,9 @@ tiempo_inicial = time()
 
 print ('Reading data...')
 df = pd.read_csv("data/data-test.csv")
-file = open(“testfile.text”, “r”) 
-text = file.read() 
+
+file = open("data/list_art_pron.txt","r",encoding="utf-8") 
+text = file.read()
 art_pron = text.split(",")
 
 print ('Removing articles and pronouns...')
@@ -38,6 +39,8 @@ res = pd.DataFrame(analyzed_data,
 
 print ('exporting data...')
 res.to_csv (r'data\data-test-analyzed.csv', index = False, header=True)
+
+file.close()
 
 tiempo_final = time() 
 tiempo_ejecucion = tiempo_final - tiempo_inicial
