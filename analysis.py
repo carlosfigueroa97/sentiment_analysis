@@ -9,12 +9,11 @@ from math import sin
 from time import time
 
 #source code
+initial_time = time() 
+
 sentiment = sentiment_analysis.SentimentAnalysisSpanish()
 data_cleansing = []
 analyzed_data = []
-
-
-tiempo_inicial = time() 
 
 print ('Reading data...')
 df = pd.read_csv("data/data-test.csv")
@@ -26,7 +25,7 @@ art_pron = text.split(",")
 print ('Removing articles and pronouns...')
 for row in df.message:
     for art in art_pron:
-        row = row.replace(' ' +art+' ',' ')
+        row = row.replace(' ' +art+ ' ',' ')
     data_cleansing.append(row)
 
 print ('Sentiment analysis...')
@@ -42,6 +41,6 @@ res.to_csv (r'data\data-test-analyzed.csv', index = False, header=True)
 
 file.close()
 
-tiempo_final = time() 
-tiempo_ejecucion = tiempo_final - tiempo_inicial
-print ('Run time: ',tiempo_ejecucion)
+final_time = time() 
+run_time = final_time - initial_time
+print ('Run time: ',run_time)
