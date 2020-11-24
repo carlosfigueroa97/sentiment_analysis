@@ -41,6 +41,7 @@ res.to_csv (r'data\data-test-analyzed.csv', index = False, header=True)
 
 file.close()
 
+print("Analysis finished")
 final_time = time() 
 run_time = final_time - initial_time
 print ('Run time: ',run_time)
