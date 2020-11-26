@@ -12,7 +12,7 @@ from time import time
 initial_time = time() 
 
 sentiment = sentiment_analysis.SentimentAnalysisSpanish()
-data_cleansing = []
+data_cleaning = []
 analyzed_data = []
 
 print ('Reading data...')
@@ -26,10 +26,10 @@ print ('Removing articles and pronouns...')
 for row in df.message:
     for art in art_pron:
         row = row.replace(' ' +art+ ' ',' ')
-    data_cleansing.append(row)
+    data_cleaning.append(row)
 
 print ('Sentiment analysis...')
-for data in data_cleansing:
+for data in data_cleaning:
     analyzed_data.append([data,sentiment.sentiment(data)])
 
 print('Saving data...')
