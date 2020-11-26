@@ -7,6 +7,5 @@
 <p>pip install pandas</p>
 <p>pip install numpy==1.19.3</p>
 <h4>Use</h4>
-<p>Add in the file list_art_pron.txt the articles and pronouns that you want to delete</p>
-<p>In folder data add dataset and change the name highlighted in bold by the name of your file (line 19):</p>
-<p>19   df = pd.read_csv("data/<strong>data-test.csv</strong>")</p>
+<p>In the folder "data / stopwords" there is a file "stopwords es.txt" which contains the articles and pronouns that you want to remove, you can add more if you want.</p>
+<p>In the folder "data / dataset", add the dataset and change the name "dataset.csv" file:</p>
